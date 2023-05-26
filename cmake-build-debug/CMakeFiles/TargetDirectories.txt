@@ -1,0 +1,3 @@
+C:/Users/miql/CLionProjects/PAMSI/cmake-build-debug/CMakeFiles/PAMSI.dir
+C:/Users/miql/CLionProjects/PAMSI/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/miql/CLionProjects/PAMSI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
