@@ -9,25 +9,24 @@
 #include <iomanip>
 #include <limits>
 #include <string>
-#include "Player.h"
+#include "Board.h"
+#include "ComputerPlayer.h"
 
 using namespace std;
 
 
 class Game {
 private:
-    int turn = 1;
-    int boardSize;
-    int winCondition;
-    vector<vector<char>> board;
-    vector<Player> players;
+    Board board=Board(3,3);
+    bool isComputerFirst=false;
+    int gameState=0;
+    int turn=0;
+    ComputerPlayer computerPlayer=ComputerPlayer(board, 'O');
 public:
-    Game();
     void initializeGame();
-    void displayBoard();
-    int checkWin();
     void startGame();
-};
+    void playerMove();
+   };
 
 
 #endif //PAMSI_GRA_H

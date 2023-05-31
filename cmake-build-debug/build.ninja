@@ -61,8 +61,20 @@ build CMakeFiles/PAMSI.dir/Game.cpp.obj: CXX_COMPILER__PAMSI_Debug C$:/Users/miq
   OBJECT_DIR = CMakeFiles\PAMSI.dir
   OBJECT_FILE_DIR = CMakeFiles\PAMSI.dir
 
-build CMakeFiles/PAMSI.dir/Player.cpp.obj: CXX_COMPILER__PAMSI_Debug C$:/Users/miql/CLionProjects/PAMSI/Player.cpp || cmake_object_order_depends_target_PAMSI
-  DEP_FILE = CMakeFiles\PAMSI.dir\Player.cpp.obj.d
+build CMakeFiles/PAMSI.dir/Board.cpp.obj: CXX_COMPILER__PAMSI_Debug C$:/Users/miql/CLionProjects/PAMSI/Board.cpp || cmake_object_order_depends_target_PAMSI
+  DEP_FILE = CMakeFiles\PAMSI.dir\Board.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\PAMSI.dir
+  OBJECT_FILE_DIR = CMakeFiles\PAMSI.dir
+
+build CMakeFiles/PAMSI.dir/Move.cpp.obj: CXX_COMPILER__PAMSI_Debug C$:/Users/miql/CLionProjects/PAMSI/Move.cpp || cmake_object_order_depends_target_PAMSI
+  DEP_FILE = CMakeFiles\PAMSI.dir\Move.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\PAMSI.dir
+  OBJECT_FILE_DIR = CMakeFiles\PAMSI.dir
+
+build CMakeFiles/PAMSI.dir/ComputerPlayer.cpp.obj: CXX_COMPILER__PAMSI_Debug C$:/Users/miql/CLionProjects/PAMSI/ComputerPlayer.cpp || cmake_object_order_depends_target_PAMSI
+  DEP_FILE = CMakeFiles\PAMSI.dir\ComputerPlayer.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PAMSI.dir
   OBJECT_FILE_DIR = CMakeFiles\PAMSI.dir
@@ -75,7 +87,7 @@ build CMakeFiles/PAMSI.dir/Player.cpp.obj: CXX_COMPILER__PAMSI_Debug C$:/Users/m
 #############################################
 # Link the executable PAMSI.exe
 
-build PAMSI.exe: CXX_EXECUTABLE_LINKER__PAMSI_Debug CMakeFiles/PAMSI.dir/main.cpp.obj CMakeFiles/PAMSI.dir/Game.cpp.obj CMakeFiles/PAMSI.dir/Player.cpp.obj
+build PAMSI.exe: CXX_EXECUTABLE_LINKER__PAMSI_Debug CMakeFiles/PAMSI.dir/main.cpp.obj CMakeFiles/PAMSI.dir/Game.cpp.obj CMakeFiles/PAMSI.dir/Board.cpp.obj CMakeFiles/PAMSI.dir/Move.cpp.obj CMakeFiles/PAMSI.dir/ComputerPlayer.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PAMSI.dir
