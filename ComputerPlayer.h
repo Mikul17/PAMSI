@@ -15,9 +15,8 @@ private:
     char symbol;
 public:
     ComputerPlayer(Board& board, char symbol);
-    Move minimax(Board& board, int depth,int alpha, int beta, bool isMaximizing);
+    Move MinMaxAlfaBeta(Board& board, int depth, int alpha, int beta, bool isMaximizing);
     void makeMove(Board& board);
-
 };
 
 
