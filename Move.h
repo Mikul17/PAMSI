@@ -1,5 +1,5 @@
 //
-// Created by miql on 27.05.2023.
+// Created by miql on 10.06.2023.
 //
 
 #ifndef PAMSI_MOVE_H
@@ -7,12 +7,15 @@
 
 
 class Move {
-private:
+public:
     int row;
     int column;
     int score;
-public:
+    Move(int score);
     Move(int row, int column, int score);
+    Move();
+    Move(int row, int column);
+
 };
 
 

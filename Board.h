@@ -9,17 +9,11 @@
 #include <iomanip>
 #include <limits>
 #include <string>
+#include "Move.h"
+
 
 using namespace std;
 
-struct Move{
-    int row;
-    int column;
-    int score;
-    Move() : score(0){};
-    Move(int s) : score(s){}
-    Move(int r, int c) : row(r), column(c), score(0){};
-};
 
 
 class Board {
@@ -37,7 +31,6 @@ public:
     int getNumberOfPossibleMoves();
     vector<Move> getPossibleMoves();
     void makeMove(Move move, char symbol);
-    void undoMove(Move move);
     int evaluateBoard();
 };
 

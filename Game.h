@@ -21,7 +21,7 @@ private:
     bool isComputerFirst=false;
     int gameState=0;
     int turn=0;
-    ComputerPlayer computerPlayer=ComputerPlayer(board, 'O');
+    ComputerPlayer computerPlayer=ComputerPlayer('O');
 public:
     void initializeGame();
     void startGame();

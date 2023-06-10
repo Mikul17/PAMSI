@@ -4,20 +4,20 @@
 
 #include "ComputerPlayer.h"
 
-ComputerPlayer::ComputerPlayer(Board& board,char symbol) {
+ComputerPlayer::ComputerPlayer(char symbol) {
     this->symbol = symbol;
 }
 
 
 Move ComputerPlayer::MinMaxAlfaBeta(Board &board, int depth, int alpha, int beta, bool isMaximizing) {
     int score = board.evaluateBoard();
-    int whichPlayer = symbol == 'X' ? 1 : -1;
 
     if(score != 0){
+        char winner = score == 1 ? 'O' : 'X';
         if(score == 2){
-            return {score*50};
+            return {0};
         }else{
-            return whichPlayer == 1 ? Move(score*(-1000)-depth*10) : Move(score*(-1000)+depth*10);
+            return winner==symbol?Move(1000-depth):Move(-1000+depth);
         }
     }
 

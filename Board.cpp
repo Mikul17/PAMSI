@@ -64,7 +64,6 @@ int Board::getNumberOfPossibleMoves() {
     return possibleMoves;
 }
 
-
 int Board::evaluateBoard() {
     // Check win condition vertically
     for (int col = 0; col < boardSize; col++) {
@@ -168,10 +167,4 @@ vector<Move> Board::getPossibleMoves() {
     }
     return possibleMoves;
 }
-
-void Board::undoMove(Move move) {
-    setSymbol(move.row, move.column, '*');
-}
-
-
 

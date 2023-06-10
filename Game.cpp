@@ -4,13 +4,14 @@
 
 #include "Game.h"
 #include "ComputerPlayer.h"
+#include <chrono>
 
 
 void Game::initializeGame() {
     int boardSize;
     int winCondition;
 
-    cout<<"Define what size of board you want to play with (1-10): "<<endl;
+    cout<<"Define what size of board you want to play with (1-7): "<<endl;
     cin>>boardSize;
     while (boardSize < 1 || boardSize > 10 || std::cin.fail()) {
         std::cout << "Wrong input! Try again: " << std::endl;
@@ -21,7 +22,7 @@ void Game::initializeGame() {
         std::cin >> boardSize;
     }
 
-    cout<<"Define how many symbols in a row you need to win (1-10): "<<endl;
+    cout<<"Define how many symbols in a row you need to win (3-7): "<<endl;
     cin >> winCondition;
     while (winCondition < 1 || winCondition > boardSize || std::cin.fail()) {
         std::cout << "Wrong input! Try again: " << std::endl;
@@ -52,7 +53,7 @@ void Game::initializeGame() {
 
 void Game:: startGame() {
     initializeGame();
-    this->computerPlayer=ComputerPlayer(board, isComputerFirst?'X':'O');
+    this->computerPlayer=ComputerPlayer(isComputerFirst?'X':'O');
 
     while (gameState == 0) {
         board.displayBoard();
@@ -75,10 +76,10 @@ void Game:: startGame() {
     board.displayBoard();
     switch (gameState) {
         case -1:
-            isComputerFirst ? cout << "Player 1 (X) won!" << endl :cout << "Player 2 (0) won!" << endl;
+            cout<<"Player (X) won !"<<endl;
             break;
         case 1:
-            isComputerFirst ? cout << "Player 2 (O) won!" << endl :cout << "Player 2 (X) won!" << endl;
+            cout<<"Player (O) won !"<<endl;
             break;
         case 2:
             std::cout << "Tie!" << std::endl;
