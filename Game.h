@@ -17,7 +17,7 @@ using namespace std;
 
 class Game {
 private:
-    Board board=Board(3,3);
+    Board board=Board(4,4);
     bool isComputerFirst=false;
     int gameState=0;
     int turn=0;
